@@ -1,0 +1,4 @@
+modEntry = [[
+	Client: lua/aids_client.lua,
+	Priority: 1
+]]

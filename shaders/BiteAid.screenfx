@@ -1,0 +1,31 @@
+settings =
+    [
+        { name="abilityRange"   default=0.0 }
+		{ name="opacityValue"   default=0.0 }
+		{ name="r"   			default=1.0 }
+		{ name="g"   			default=1.0 }
+		{ name="b"   			default=1.0 }
+        { name="depthTexture"  }
+        { name="normalTexture" }
+    ]
+    
+layers =
+    [
+        {
+            color_targets                   = "back_buffer"
+            shader                          = "shaders/BiteAid.shader"
+            technique                       = "SFXBiteAid"
+            generator                       = "fullscreen"
+            parameters                      = {
+                    abilityRange            = "abilityRange"
+					opacityValue            = "opacityValue"
+					r						= "r"
+					g						= "g"
+					b						= "b"
+                    baseTexture             = { resource="source_buffer" linear=true }
+                    depthTexture            = { resource="depthTexture" linear=true }
+                    normalTexture           = { resource="normalTexture" linear=true }
+                }
+        }
+    ]
+      
